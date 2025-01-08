@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wednesday Task</title>
+</head>
+<body>
+    <form action="" method="POST" name="registration">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <!-- Order form-->
+    <form action="/Create-Order" method="Post" id="orderForm">
+
+        <!-- customer infor -->
+         <fieldset>
+            <legend>Customer Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" required>
+            <br>
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" required>
+         </fieldset>
+    </form>
+</body>
+</html>
