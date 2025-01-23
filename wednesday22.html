@@ -13,19 +13,27 @@
                 padding: 20px;
                 width: 400px;
             }*/
-            header,
+
+             /*
+            ========================================
+            Clearfix
+            ========================================
+            */  
+                            header,
             section,
             aside,
             footer{
                 background-color: green;
                 margin: 3px;
+              
             
             }
             footer,
             header{
                 height: 100px;
+                
             }
-            section{
+            /* section{
                 height: 300px;
                 
                 float: left;
@@ -40,14 +48,39 @@
             footer {
                 clear: both;
                 
+            } */
+            .group:before,
+            .group:after {
+            content: "";
+            display: table;
+            }
+            .group:after {
+            clear: both;
+            }
+            .group {
+            clear: both;
+            *zoom: 1;
+            }
+            section {
+            float: left;
+            width: 63%;
+            height: 300px;
+            }
+            aside {
+            float: right;
+            width: 30%;
+            height: 300px;
             }
 
     </style>
 </head>
 <body>
     <header>h</header>
-    <section>s</section>
-    <aside>a</aside>
+    <div class="group">
+
+        <section>s</section>
+        <aside>a</aside>
+    </div>
     <footer>f</footer>
     
 </body>
