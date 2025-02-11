@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <style>
+    /* margin longhand */
 .container{
     border:5px solid blue;
     margin: 40px;
@@ -20,12 +21,50 @@
     margin-bottom: 40px;
     margin-left:4em;
 }
+/* margin collapsing */
+
+.container1{
+    border: 5px solid blue;
+    margin: 40px;
+}
+p{
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding: 10px;
+}
+.one{
+    margin-bottom: 50px;
+
+}
+.two{
+    margin-top: 30px;
+}
 </style>
 <body>
+    <!-- margin long hand -->
     <div class="container">
         <div class="box">
             change my margin
         </div>
     </div>
+    <!-- margin collapsing 
+    NB: margin collapsing only occurs in the vertical direction. It does not occur in the horizontal direction. 
+        Two positive margins will combine to become one margin. Its size will be equal to the largest individual margin 
+        Two negative margins will collapse and the smallest( furthest from zero) value will be used.
+        If one margin is negative, its value will be subtracted from the total.
+        Margins of floating and absolutelt positioned elements never collapse
+        margins don't collapse in a container with display set to flex or grid
+
+        margin collapsing occurs in 3 basic cases:
+        Adjacent siblings
+        empty blocks
+        no content separating parent and descendants
+
+
+    -->
+<div class="container1">
+    <p class="one">I am paragraph one.</p>
+    <p class="two">I am paragraph two.</p>
+</div>
 </body>
 </html>
