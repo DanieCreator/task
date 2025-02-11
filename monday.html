@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Box Model</title>
     <style>
-  .block{
-  display: flex;
-  width: 100%;
+  body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 1px solid rebeccapurple;
+  padding: 0.2em;
+}
 
-  }
+.block,
+li {
+  border: 1px solid blue;
+  padding: 0.2em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
     </style>
 </head>
 <body>
+    <p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>
+  I am another paragraph. Some of the <span class="block">words</span> have been
+  wrapped in a <span>span element</span>.
+</p>
     <section class="block">
         <h1>Trying out the box model</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
