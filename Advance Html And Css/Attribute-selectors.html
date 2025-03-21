@@ -5,7 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attribute Selectors: Beyond the Basics</title>
 </head>
+<style>
+.wordmatching .message[class~="warning"] {
+  background-color: yellow;
+  border: 1px solid orange;
+}
+.startwith [lang|="en"] {
+  color: blue;
+}
+/* Targets links with href attributes starting with "https://" */
+a[href^="https://"] {
+  font-weight: bold;
+}
+
+/* Targets images with src attributes ending with ".jpg" */
+img[src$=".jpg"] {
+  border: 2px solid red;
+}
+/* Targets elements with data-category attributes containing "news" */
+div[data-category*="news"] {
+  font-style: italic;
+}
+/* Targets input elements with a placeholder attribute containing "name", case-insensitively */
+.caseInsensitive input[placeholder*="name" i] {
+  border: 1px solid green;
+}
+/* Targets external links (class="external") with href attributes starting with "https://" */
+a.external[href^="https://"] {
+  color: orange;
+}
+</style>
 <body>
-    
+    <!-- [attribute~=value]: Word Matching -->
+     <div class="wordmatching">
+
+         <div class="message success">Success message</div>
+         <div class="message error">Error message</div>
+         <div class="message warning urgent">Warning message</div>
+         <div class="message">Plain message</div>
+     </div>
+     <!-- [attribute|=value]: Value Starting With -->
+     <div class="startwith">
+        <div lang="en">English</div>
+        <div lang="en-US">English (United States)</div>
+        <div lang="en-GB">English (Great Britain)</div>
+        <div lang="fr">French</div> 
+     </div>
+     <!-- [attribute^=value]: Value Starting With (Substring) -->
+     <div>
+        <a href="https://example.com/page1">Page 1</a>
+        <a href="https://example.com/page2">Page 2</a>
+        <a href="http://anotherexample.com/page3">Page 3</a>
+     </div>
+
+        <!-- [attribute$=value]: Value Ending With -->
+         <div>
+            <img src="image1.jpg" alt="Image 1">
+<img src="image2.png" alt="Image 2">
+<img src="image3.gif" alt="Image 3">
+         </div>
+         <!-- [attribute*=value]: Value Containing -->
+<div>
+    <div data-category="news-articles">News Articles</div>
+    <div data-category="sports-news">Sports News</div>
+    <div data-category="opinion-pieces">Opinion Pieces</div>
+</div>
+    <div class="caseInsensitive">
+        <input type="text" placeholder="Enter your name">
+        <input type="TEXT" placeholder="Enter your email">
+    </div>
+   <!-- combing attribute selectors -->
+    <div>
+        <a href="https://example.com/page1" class="external">Page 1</a>
+        <a href="https://example.com/page2">Page 2</a>
+    </div>
 </body>
 </html>
