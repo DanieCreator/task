@@ -5,7 +5,6 @@
 }
 nav{
     background-color: black;
-    padding: 0;
    }
 nav ul{
     display: flex;
@@ -20,4 +19,7 @@ nav ul li{
 nav ul li a{
     color: white;
     text-decoration: none;
+}
+.bbc_home div{
+display: flex;
 }
