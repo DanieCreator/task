@@ -20,6 +20,26 @@ nav ul li a{
     color: white;
     text-decoration: none;
 }
-.bbc_home div{
+aside{
+    display: flex;
+    justify-content: space-between;
+}
+.bbc_home{
 display: flex;
+}
+.bbc_home_main{
+    width: 150%;
+}
+.bbc_home_articles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+
+}
+article{
+    width: 40%;
+    border: 1px solid black;
+
 }
