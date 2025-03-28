@@ -21,25 +21,42 @@ nav ul li a{
     text-decoration: none;
 }
 aside{
-    display: flex;
+    display:flex;
     justify-content: space-between;
 }
 .bbc_home{
-display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 .bbc_home_main{
-    width: 150%;
+    flex: .7;
 }
 .bbc_home_articles{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content:space-between;
-
+    flex: 1;
+    justify-content: space-evenly;
 }
 article{
-    width: 40%;
     border: 1px solid black;
+    flex-basis: 45%;
+    margin: 10px;
+    padding: 10px;
+
+}
+span, h2{
+    border-left: 3px solid red;
+    padding-left: 5px;
+    margin-left: 5px;
+
+
+}
+.bbc_news{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 
 }
