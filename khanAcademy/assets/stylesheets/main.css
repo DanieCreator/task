@@ -1,0 +1,58 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+/* line 1, khanAcademy/assets/stylesheets/main.css */
+html {
+  font-size: 12px;
+}
+nav{
+    background-color: white;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+    margin: 0 10px;
+    display: inline-flex;
+}
+.khan-logo img:not([src])::before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: black;
+}
+nav ul li a{
+    text-decoration: none;
+    color:blue;
+}
+footer{
+    background-color:blue;
+    padding: 10px;
+    display: flex;
+}
+footer p,ul li a{
+    color:white;
+}
+footer .footer_links{
+    display: flex;
+  
+}
+
+footer .footer_links ul{
+    margin-left: 70px;
+    list-style: none;
+}
+footer .footer_links ul li a{
+  text-decoration: none;
+}
