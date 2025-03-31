@@ -32,9 +32,39 @@ nav ul li{
     position: absolute;
     color: black;
 }
+
 nav ul li a{
     text-decoration: none;
     color:blue;
+}
+main section{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    
+}
+main section + section{
+    background-color:antiquewhite;
+}
+.hero div{
+    width: 40%;
+    margin: 0 auto;
+}
+.hero ul{
+    list-style: none;
+}
+.hero ul li{
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 3px;
+    padding: 10px; 
+}
+.hero ul li a{
+    color: white;
+    text-decoration: none;
 }
 footer{
     background-color:blue;
